@@ -12,7 +12,7 @@ const listContacts = async () => {
 
 const getContactById = async (contactId) => {
   const data = await listContacts();
-  const contact = data.find((item) => item.id == contactId);
+  const contact = data.find((item) => item.id === contactId);
   if (!contact) {
     return null;
   }
@@ -21,7 +21,7 @@ const getContactById = async (contactId) => {
 
 const removeContact = async (contactId) => {
   const data = await listContacts();
-  const idx = data.findIndex((item) => item.id == contactId);
+  const idx = data.findIndex((item) => item.id === contactId);
   if (idx === -1) {
     return null;
   }
